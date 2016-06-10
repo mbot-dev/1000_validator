@@ -1,0 +1,104 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: medium;
+  line-height: 1.5;
+  color: #606c71;
+}
+a {
+  color: #1e6bb8;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+#headerBar {
+    width: 100%;
+    height: 64px;
+    background-color: #2d80d2;
+    line-height: 64px;
+}
+#headerBar h1 {
+    color: white;
+    text-align: center;
+}
+#headerBar img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 20px;
+    right: 32px;
+    opacity: 0.9;
+}
+#content{
+    width: 80%;
+    margin: auto;
+}
+#topSection{
+    width: 100%;
+}
+
+#paste_zone {
+    width: 100%;
+    margin: 10px;
+}
+#validatePaste {
+    margin: 10px;
+}
+#pasteResult {
+    width: 100%;
+    margin: 10px;
+}
+
+
+#selection_zone{
+    width: 100%;
+    margin: 10px;
+}
+#validateSelection {
+    margin: 10px;
+}
+#selectionResult {
+    width: 100%;
+    margin: 10px;
+}
+
+
+#drop_zone_cover{
+    width: 100%;
+    margin: 10px;
+}
+#drop_zone{
+    width: 100%;
+    height: 64px;
+    margin: auto;
+    border: 1px dotted #606c71;
+    line-height: 64px;
+    text-align: center;
+}
+#dropped_list{
+    width: 100%;
+    margin: 10px;
+    display: block;
+}
+#validateDrop {
+    margin: 10px 10px 10px 10px;
+}
+#dropResult {
+    width: 100%;
+    margin: 10px 10px 10px 0px;
+}
+
+
+#bottomSection{
+    width: 100%;
+}
+#footerBar{
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    font-size: small;
+}
