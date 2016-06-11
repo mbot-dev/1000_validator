@@ -20,10 +20,11 @@
 		var resetAll = function () {
 			document.getElementById('pasteText').value = '';
 			document.getElementById('selectedFile').value = '';
-			document.getElementById('dropped_list').innerHTML = '';
+			document.getElementById('drop_list').innerHTML = '';
 			dropedFiles = [];
 		};
 		 
+		// http://www.html5rocks.com/en/tutorials/file/dndfiles/
 		function handleFileSelect (evt) {
 			evt.stopPropagation();
 			evt.preventDefault();
@@ -38,9 +39,10 @@
 				f.size, ' bytes, last modified: ',
 				f.lastModifiedDate.toLocaleDateString(), '</li>');
 			}
-			document.getElementById('dropped_list').innerHTML = '<ul>' + output.join('') + '</ul>';
+			document.getElementById('drop_list').innerHTML = '<ul>' + output.join('') + '</ul>';
 		}
 
+		// http://www.html5rocks.com/en/tutorials/file/dndfiles/
 		function handleDragOver (evt) {
 			evt.stopPropagation();
 			evt.preventDefault();
@@ -138,11 +140,11 @@
 	</div>
 	<div id="content">
 		<div id="topSection">
-			<p>1000年カルテプロジェクトへMMLインスタンスを送信するためのバリデーションサービスです。開発中の医療情報システムからMML形式のデータが出力できるようになったら、このサーバーでインスタンスの妥当性を検証してください。</p>
+			<p>MML インスタンスのバリデーション・チェックを行うことができます。1000年カルテプロジェクトへ参加するためには、医療情報システムからMML形式のデータを出力する必要があります。このサーバーでその際の検証を行うことができます。</p>
 		</div>
 		<div id="paste_zone">
 			<h3>インスタンスをコピー・ペースト</h3>
-			<textarea id="pasteText" rows="20" cols="100"></textarea><br/>
+			<textarea id="pasteText" rows="15" cols="100"></textarea><br/>
 			<input id="validatePaste" type="button" value="Validate" onclick="validatePaste();">
 			<div id="pasteResult"></div>
 		</div>
@@ -155,7 +157,7 @@
 		<div id="drop_zone_cover">
 			<h3>or ドラッグ &amp; ドロップ</h3>
 			<div id="drop_zone">ここへファイルをドロップしてください</div>
-			<output id="dropped_list"></output>
+			<output id="drop_list"></output>
 			<input id="validateDrop" type="button" value="Validate" onclick="validateDrop();">
 			<div id="dropResult"></div>
 		</div>
@@ -170,9 +172,11 @@
 			</ul>
 			<h3>関連情報</h3>
             <ul>
+            	<li><a href="https://www.facebook.com/gEHR-398609153661839/">千年カルテプロジェクト</a></li>
 				<li><a href="http://www.medxml.net/MML40j/xsd.html">MML4.0 XSDファイル一覧</a></li>
 				<li><a href="http://www.medxml.net/MML40j/mml4.html">MML4.0</a></li>
-                <li><a href="https://www.facebook.com/gEHR-398609153661839/">千年カルテプロジェクト</a></li>
+				<li><a href="https://github.com/mbot-dev/1000_validator/">検証プログラム</a></li>
+				<li><a href="https://1000-builder.au-syd.mybluemix.net/">千年ビルダー</a></li>
             </ul>
 		</div>
 		<div id="footerBar">

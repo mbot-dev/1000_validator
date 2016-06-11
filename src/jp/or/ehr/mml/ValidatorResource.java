@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.net.URL;
 
-import javax.ws.rs.ApplicationPath;
+import javax.annotation.PostConstruct;
+import javax.ejb.Singleton;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
@@ -23,16 +24,19 @@ import org.xml.sax.SAXException;
 
 import com.ibm.json.java.JSONObject;
 
-@ApplicationPath("api")
+@Singleton
 @Path("v1")
-public class ValidatorResource extends javax.ws.rs.core.Application {
-
-	private static Schema schema;
-	static {
+public class ValidatorResource {
+	
+	private Schema schema;
+	
+	@PostConstruct
+	public void prepare() {
 		try {
 			URL url = ValidatorResource.class.getResource("/WEB-INF/lib/schema/mml.xsd");
 			SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 			schema = schemaFactory.newSchema(url);
+			System.out.println("MML schema is created successfully");
 		} catch (SAXException ex) {
 			ex.printStackTrace(System.err);
 		}
@@ -76,7 +80,7 @@ public class ValidatorResource extends javax.ws.rs.core.Application {
 			json.put("reason", reason);
 		}
 		try {
-			json.serialize(System.err);
+			json.serialize(System.out);
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
