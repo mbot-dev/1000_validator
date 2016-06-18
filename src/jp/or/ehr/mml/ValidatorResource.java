@@ -36,7 +36,7 @@ public class ValidatorResource {
 			URL url = ValidatorResource.class.getResource("/WEB-INF/lib/schema/mml.xsd");
 			SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 			schema = schemaFactory.newSchema(url);
-			System.out.println("MML schema is created successfully");
+			System.out.println("MML schema has created successfully");
 		} catch (SAXException ex) {
 			ex.printStackTrace(System.err);
 		}
@@ -67,7 +67,7 @@ public class ValidatorResource {
 			result = createResult("NOT valid", e.getLocalizedMessage());
 			return Response.ok(result).build();
 			
-		} catch (IOException ex) {
+		} catch (Exception ex) {
 			ex.printStackTrace(System.err);
 			return Response.status(500).build();
 		}
@@ -82,7 +82,7 @@ public class ValidatorResource {
 		try {
 			json.serialize(System.out);
 		} catch (IOException e1) {
-			e1.printStackTrace();
+			e1.printStackTrace(System.err);
 		}
 
 		return json;
