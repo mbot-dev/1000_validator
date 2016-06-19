@@ -9,28 +9,28 @@
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body onload="setupListeners();">
-	<div class="w3-container w3-blue">
-		<h1 class="w3-center">千年バリデータ</h1><a href="https://github.com/mbot-dev/1000_validator"><img src="image/GitHub-Mark-Light-64px.png" style="width: 32px;height: 32px;position: absolute;top: 22px;right: 22px;opacity: 0.9;"></a>
-	</div>
+	<header class="w3-container w3-blue">
+		<h2 class="w3-center">千年バリデータ</h2><a href="https://github.com/mbot-dev/1000_validator"><img id="git_mark" src="image/GitHub-Mark-Light-64px.png" alt="GitHub Mark"></a>
+	</header>
 	<div class="w3-container w3-margin">
-		<div class="w3-container w3-section">
+		<div class="w3-container">
 			<p>MML インスタンスのバリデーション・チェックを行うことができます。1000年カルテプロジェクトへ参加するためには、医療情報システムからMML形式のデータを出力する必要があります。このサーバーでその際の検証を行うことができます。</p>
 		</div>
-		<div class="w3-container w3-section">
+		<div class="w3-container">
 			<h4>インスタンスをコピー・ペースト</h4>
 			<textarea id="pasteText" rows="10" cols="100"></textarea><br/>
 			<button class="w3-btn w3-blue" onclick="validatePaste();">Validate</button>
 			<div id="pasteResult"></div>
 		</div>
 		<hr/>
-		<div class="w3-container w3-section">
+		<div class="w3-container">
 			<h4>or ファイルを選択</h4>
 			<input type="file" id="selectedFile"><br/>
 			<button class="w3-btn w3-blue" onclick="validateSelection();">Validate</button>
 			<div id="selectionResult"></div>
 		</div>
 		<hr/>
-		<div class="w3-container w3-section">
+		<div class="w3-container">
 			<h4>or ドラッグ &amp; ドロップ</h4>
 			<div id="drop_zone">ここへファイルをドロップしてください</div>
 			<output id="drop_list"></output>
@@ -38,7 +38,7 @@
 			<div id="dropResult"></div>
 		</div>
 		<hr/>
-		<div class="w3-container w3-section">
+		<div class="w3-container">
 			<h4>検証結果について</h4>
 			<ul>
 				<li>検証は MML4.0 の XSD に対して行います。</li>
@@ -56,9 +56,9 @@
 				<li><a href="https://1000-builder.au-syd.mybluemix.net/">千年ビルダー</a></li>
             </ul>
 		</div>
-		<div class="w3-container w3-blue">
-			<p class="w3-center">&copy;2016 Kazushi Minagawa</p>
-		</div>
 	</div>
+	<footer class="w3-container w3-blue">
+		<p class="w3-center">&copy;2016 Kazushi Minagawa.</p>
+	</footer>
 </body>
 </html>
