@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee  
-   http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
-   	<servlet>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee  
+   http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<servlet>
 		<servlet-name>javax.ws.rs.core.Application</servlet-name>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>javax.ws.rs.core.Application</servlet-name>
 		<url-pattern>/api/*</url-pattern>
 	</servlet-mapping>
+	<security-constraint>
+		<display-name>HTTPS Redirect Security Constraint</display-name>
+		<web-resource-collection>
+			<web-resource-name>1000 Years Web Service</web-resource-name>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<user-data-constraint>
+			<description>Ensure to allow only confidential communication</description>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
 </web-app>

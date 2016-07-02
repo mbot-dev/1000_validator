@@ -2,7 +2,6 @@
 // URL to validate
 var validatorURL = (function () {
 	var url = 'http://localhost:9080/1000-validator/api/v1';
-	//var url = 'https://1000-validator.au-syd.mybluemix.net/api/v1';
 	return function () {
 		return url;
 	};
