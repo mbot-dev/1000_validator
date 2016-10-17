@@ -1,7 +1,7 @@
 
 // URL to validate
 var validatorURL = (function () {
-	var url = 'http://localhost:9080/1000-validator/api/v1';
+	var url = '/api/v1';
 	return function () {
 		return url;
 	};
