@@ -1,6 +1,6 @@
 ## 千年バリデータ
 
-千年カルテプロジェクトが必要とするMML4.0インスタンスの妥当性を検証するサーバプログラムです。プロジェクトの基盤であるため、ソースを公開しています。
+千年カルテプロジェクトが必要とするMML4.1.2インスタンスの妥当性を検証するサーバプログラムです。プロジェクトの基盤であるため、ソースを公開しています。
 
 ### 開発環境
 
@@ -11,7 +11,7 @@
 
 ### 検証方法
 
- * 対象 XSD: [MML 4.1.2 Schema](http://www.medxml.net/MML40j/xsd.html)
+ * 対象 XSD: [MML 4.1.2 Schema](http://medxml.net/MML412j/xsd.html)
  * javax.xml.validation を使用 [src/jp/or/ehr/mml/ValidatorResource.java](https://github.com/mbot-dev/1000_validator/blob/master/src/jp/or/ehr/mml/ValidatorResource.java)
  * [稼働インスタンス](https://1000-validator.au-syd.mybluemix.net/)
 

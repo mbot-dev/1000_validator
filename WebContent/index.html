@@ -18,7 +18,7 @@
 		</div>
 		<div class="w3-container">
 			<h4>インスタンスをコピー・ペースト</h4>
-			<textarea id="pasteText" rows="10" cols="100"></textarea><br/>
+			<textarea id="pasteText" rows="25" cols="100"></textarea><br/>
 			<button class="w3-btn w3-blue" onclick="validatePaste();">検 証</button>
 			<div id="pasteResult"></div>
 		</div>
@@ -41,7 +41,7 @@
 		<div class="w3-container">
 			<h4>検証結果について</h4>
 			<ul>
-				<li>検証は MML4.0 の XSD に対して行います。</li>
+				<li>検証は MML 4.1.2 の XSD に対して行います。</li>
 				<li>結果は JSON オブジェクトで表示されます。</li>
 				<li>result: "valid" であれば妥当なインスタンスです。</li>
 				<li>result: "NOT valid" の時は問題があります。理由は reason 属性に表示されます。</li>
@@ -50,15 +50,15 @@
 			<h4>関連情報</h4>
             <ul>
             	<li><a href="https://www.facebook.com/gEHR-398609153661839/">千年カルテプロジェクト</a></li>
-				<li><a href="http://www.medxml.net/MML40j/xsd.html">MML4.0 XSDファイル一覧</a></li>
-				<li><a href="http://www.medxml.net/MML40j/mml4.html">MML4.0</a></li>
+				<li><a href="http://medxml.net/MML412j/xsd.html">MML4.1.2 XSDファイル一覧</a></li>
+				<li><a href="http://medxml.net/MML412j/mml4.html">MML4.1.2</a></li>
 				<li><a href="https://github.com/mbot-dev/1000_validator/">検証プログラム</a></li>
 				<li><a href="https://1000-builder.au-syd.mybluemix.net/">千年ビルダー</a></li>
             </ul>
 		</div>
 	</div>
 	<footer class="w3-container w3-blue">
-		<p class="w3-center">&copy;2016 Kazushi Minagawa.</p>
+		<p class="w3-center">&copy;2016 千年カルテプロジェクト</p>
 	</footer>
 </body>
 </html>
